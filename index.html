@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hey, I'm Nanda</title>
+  <meta name="description" content="Nanda is a designer learning to build with Claude Code.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f2ec;
+      --text: #1d1b19;
+      --muted: #6b645c;
+      --accent: #d9622b;
+      --ring: #e7ddd0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #161412;
+        --text: #f3eee8;
+        --muted: #a39b91;
+        --accent: #f08a54;
+        --ring: #2c2824;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; }
+
+    body {
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: 48px 20px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      max-width: 560px;
+      text-align: center;
+      animation: rise 0.7s ease-out both;
+    }
+
+    .photo {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      box-shadow: 0 0 0 8px var(--ring);
+    }
+
+    h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.5rem, 8vw, 3.75rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    h1 .wave {
+      display: inline-block;
+      transform-origin: 70% 70%;
+      animation: wave 2.4s ease-in-out 0.8s 1;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    p strong { color: var(--text); font-weight: 500; }
+
+    .social {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 36px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      background: var(--text);
+      color: var(--bg);
+      font-weight: 500;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .social:hover { background: var(--accent); transform: translateY(-2px); }
+    .social:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes wave {
+      0%, 60%, 100% { transform: rotate(0); }
+      10%, 30% { transform: rotate(14deg); }
+      20%, 40% { transform: rotate(-8deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      main, h1 .wave { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="photo" src="photo.jpg" alt="Nanda, seen from behind, looking out over the snowy mountains of Gulmarg" width="200" height="200">
+    <h1>Hey, I'm Nanda <span class="wave">👋</span></h1>
+    <p>I'm a designer learning to build with <strong>Claude Code</strong>.</p>
+    <!-- TODO: replace # with the real social media URL -->
+    <a class="social" href="#" target="_blank" rel="noopener">Follow me on social →</a>
+  </main>
+</body>
+</html>
